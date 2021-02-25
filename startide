@@ -1,0 +1,7 @@
+#!/bin/bash
+THEIA_DEFAULT_PLUGINS=local-dir:/home/user/default-plugins,local-dir:/theia/plugins,local-dir:/extbin/plugins,local-dir:/extbin/shared-plugins
+export THEIA_WEBVIEW_EXTERNAL_ENDPOINT={{hostname}}
+# https://github.com/eclipse-theia/theia/pull/8759
+export THEIA_MINI_BROWSER_HOST_PATTERN={{hostname}}
+cd /theia
+node /theia/src-gen/backend/main.js /home/user/project --hostname=0.0.0.0
