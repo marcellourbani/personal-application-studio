@@ -16,7 +16,7 @@ Sadly this includes the [CAP CDS extension](https://marketplace.visualstudio.com
 Runs in a docker container, you don't need to download anything manually other than docker. Once you installed docker,you can run it like this:
 
 ```bash
-docker run --name theia_pas -d -v ${HOME}/pasworkspace:/home/user/projects -p 3000:3000 personal-application-studio
+docker run --name theia_pas -d -v ${HOME}/pasworkspace:/home/user/projects -p 3000:3000 murbani/personal-application-studio
 ```
 
 and then your environment will be at [http://localhost:3000](http://localhost:3000)
@@ -30,7 +30,7 @@ is optional, will allow you to keep your code out of the container, which you mi
 If you have a set of extensions you want to include by default you can put the vsix files ina folder, say **pasplugins** and mount it:
 
 ```bash
-docker run --name theia_pas -d -v ${HOME}/pasworkspace:/home/user/projects -v ${HOME}/pasplugins:/home/user/default-plugins -p 3000:3000 personal-application-studio
+docker run --name theia_pas -d -v ${HOME}/pasworkspace:/home/user/projects -v ${HOME}/pasplugins:/home/user/default-plugins -p 3000:3000 murbani/personal-application-studio
 ```
 
 ## Running the template wizard
@@ -51,7 +51,7 @@ docker start theia_pas
 docker rm theia_pas
 
 # delete the image
-docker image rm personal-application-studio
+docker image rm murbani/personal-application-studio
 
 ```
 

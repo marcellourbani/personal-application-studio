@@ -50,8 +50,8 @@
   },
   "scripts": {
     "preinstall": "node-gyp install",
-    "createimage": "docker build . -t personal-application-studio",
-    "runcontainer": "docker run --name theia_pas -d -p 3000:3000 personal-application-studio",
+    "createimage": "docker build . -t murbani/personal-application-studio",
+    "runcontainer": "docker run --name theia_pas -d -p 3000:3000 murbani/personal-application-studio",
     "pruneall": "docker kill theia_pas;docker rm theia_pas;docker image rm personal-application-studio",
     "logs": "docker logs -f theia_pas"
   },
